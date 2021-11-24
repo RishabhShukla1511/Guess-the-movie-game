@@ -137,8 +137,8 @@ int main()
     "fargo",
     "no country for old men"};
     string bollywood_films[]={
-      "Dangal";"Bajrangi Bhaijaan";"Secret Superstar";"Sultan";"Padmaavat";"Tiger Zinda Hai";"3 idiots";
-    }
+      "Dangal","Bajrangi Bhaijaan","Secret Superstar","Sultan","Padmaavat","Tiger Zinda Hai","3 idiots",
+    };
     int v=1;
     while(v)
     {
@@ -155,13 +155,16 @@ int main()
           case 1: cout << "This game is about guessing the name of the movie.\n";
                   cout << "You have 10 points to begin with.You make a guess of the letters in the movie\nif the guessed letter matches with any of the letter in the movie you get pretty close to guess the movie.\n";
                   cout << "You lose 1 point for each wrong guess.\nThe game gets over if you lose all your points.\n";
-                  cout << "Now would you like to begin the game :\nPress n to exit or any other key to continue : ";
+                  cout <<" Now would you like to begin the game :\n";
+                  // cout<<"Press n to exit or any other key to continue : ";
+                  cout<<"1> Press b/B for Bollywood only mode,\n2> h/H for Hollywood only mode,\n3> any key other than h/b for both modes,\n4> n/N to exit : ";
                   cin >> c;
                   if(c=='n' || c=='N')
                     break;
           case 2: system("cls");
                   v=game_beginner(films_name);
                   break;
+              
           default: cout << "OOPS!! invalid choice";
       }
       if(c=='n' || c=='N')
